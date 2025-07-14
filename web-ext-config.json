@@ -1,0 +1,27 @@
+{
+  "sourceDir": "./",
+  "artifactsDir": "./web-ext-artifacts/",
+  "ignoreFiles": [
+    "*.md",
+    "*.ps1",
+    "*.js.map",
+    "node_modules/**",
+    "web-ext-artifacts/**",
+    "package.json",
+    "package-lock.json",
+    ".git/**",
+    ".vscode/**",
+    "*.zip",
+    "build.js",
+    "debug.js",
+    "TESTING.md",
+    "INSTALLATION.md",
+    "SIGNING-GUIDE.md"
+  ],
+  "build": {
+    "overwriteDest": true
+  },
+  "sign": {
+    "channel": "unlisted"
+  }
+}

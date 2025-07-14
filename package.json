@@ -7,6 +7,10 @@
     "build": "powershell -ExecutionPolicy Bypass -File package-extension.ps1",
     "package": "powershell -ExecutionPolicy Bypass -File package-extension.ps1",
     "verify": "powershell -ExecutionPolicy Bypass -File verify-extension.ps1",
+    "sign": "powershell -ExecutionPolicy Bypass -File sign-extension.ps1",
+    "web-ext:build": "web-ext build --config=web-ext-config.json",
+    "web-ext:run": "web-ext run --config=web-ext-config.json",
+    "web-ext:sign": "web-ext sign --config=web-ext-config.json",
     "start": "echo 'Open Firefox and navigate to about:debugging to load the extension'",
     "install": "echo 'Use npm run build to create extension package'"
   },
@@ -22,7 +26,7 @@
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
-    "web-ext": "^7.8.0"
+    "web-ext": "^7.12.0"
   },
   "repository": {
     "type": "git",
