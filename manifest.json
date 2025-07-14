@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "LinkedIn AI Comment Assistant",
+  "version": "1.0.0",
+  "description": "Add AI-powered comment suggestions to LinkedIn posts",
+  
+  "applications": {
+    "gecko": {
+      "id": "linkedin-ai-comment@extension.local",
+      "strict_min_version": "57.0"
+    }
+  },
+  
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "https://api.openai.com/*",
+    "https://www.linkedin.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "LinkedIn AI Comment Assistant"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "web_accessible_resources": [
+    "modal.html",
+    "styles.css"
+  ]
+}

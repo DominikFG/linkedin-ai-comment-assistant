@@ -1,0 +1,35 @@
+{
+  "name": "linkedin-ai-comment-assistant",
+  "version": "1.0.0",
+  "description": "A Firefox extension that adds AI-powered comment generation to LinkedIn posts",
+  "main": "content.js",
+  "scripts": {
+    "build": "powershell -ExecutionPolicy Bypass -File package-extension.ps1",
+    "package": "powershell -ExecutionPolicy Bypass -File package-extension.ps1",
+    "verify": "powershell -ExecutionPolicy Bypass -File verify-extension.ps1",
+    "start": "echo 'Open Firefox and navigate to about:debugging to load the extension'",
+    "install": "echo 'Use npm run build to create extension package'"
+  },
+  "keywords": [
+    "firefox",
+    "extension",
+    "linkedin",
+    "ai",
+    "chatgpt",
+    "comments",
+    "automation"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "web-ext": "^7.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/linkedin-ai-comment-assistant"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/linkedin-ai-comment-assistant/issues"
+  },
+  "homepage": "https://github.com/yourusername/linkedin-ai-comment-assistant#readme"
+}
